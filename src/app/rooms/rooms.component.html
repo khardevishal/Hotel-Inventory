@@ -1,0 +1,38 @@
+<p>rooms works!</p>
+<div *ngIf="availableRooms > 0">
+    Rooms are Available...
+    <hr><br>
+    Rooms Details:
+    <div>
+        <app-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)"
+            (deletedRoom)="deleteRoom($event)"></app-rooms-list>
+        <div *ngIf="selectedRoom">
+            {{selectedRoom | json}}
+        </div>
+
+        <div>
+            <button (click)="addRoom()" class="btn btn-primary">Add Room</button>
+        </div>
+
+        <div class="form-group" >
+            <form action="/" (ngSubmit)="addYourRoom()">
+                <label for="RoomNo">Room Number</label>
+                <input type="text" name="RoomNumber" [(ngModel)]="roomNo" class="form-control">
+                <label for="RoomNo">Room Type</label>
+                <input type="text" name="RoomType" [(ngModel)]="roomTy" class="form-control">
+                <label for="RoomNo">Room Amenities</label>
+                <input type="text" name="Ammenities" [(ngModel)]="amme" class="form-control">
+                <label for="RoomNo">Room Check In Time</label>
+                <input type="date" name="CheckInTime" [(ngModel)]="checkIn" class="form-control">
+                <label for="RoomNo">Room Price</label>
+                <input type="text" name="Price" [(ngModel)]="pri" class="form-control">
+                <div class="cetr">
+                    <button class="btn btn-primary">Add Your Room</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+</div>

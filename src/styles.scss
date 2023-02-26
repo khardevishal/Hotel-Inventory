@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'F:/Programming/Angular/hotelInventoryApp/node_modules/bootstrap/dist/css/bootstrap.min.css';
+.even{
+    background-color: aqua;
+}
+
+.odd{
+    background-color: orange;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.cetr{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px;
+}
+.form-control{
+    width: 60vw;
+    background-color: red;
+    border: 2px solid black;
+}
